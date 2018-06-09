@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import br.com.leandro.arrowtry.R
-import br.com.leandro.arrowtry.githubrepos.di.RepositoriesDeps.RepositoriesContext
+import br.com.leandro.arrowtry.githubrepos.di.RepositoriesDeps
 import br.com.leandro.arrowtry.githubrepos.domain.Repository
 import br.com.leandro.arrowtry.githubrepos.presentation.getSuperHeroes
 import br.com.leandro.arrowtry.githubrepos.view.adapter.RepositoriesAdapter
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), RepositoriesView {
 
     override fun onResume() {
         super.onResume()
-        getSuperHeroes().run(RepositoriesContext(this))
+        getSuperHeroes().run(RepositoriesDeps(this))
     }
 
     override fun showNotFoundError() {
