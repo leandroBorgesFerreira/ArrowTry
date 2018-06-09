@@ -14,7 +14,7 @@ class HeroesCardAdapter(
         private val itemClick: (Repository) -> Unit) : RecyclerView.Adapter<HeroesCardAdapter.ViewHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, pos: Int): ViewHolder {
-      val view = LayoutInflater.from(parent.context).inflate(R.layout.item_hero_card, parent, false)
+      val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_repository, parent, false)
       return ViewHolder(view, itemClick)
   }
 
