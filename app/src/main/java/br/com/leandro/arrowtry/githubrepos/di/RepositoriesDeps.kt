@@ -1,5 +1,7 @@
 package br.com.leandro.arrowtry.githubrepos.di
 
 import br.com.leandro.arrowtry.githubrepos.view.RepositoriesView
+import br.com.leandro.arrowtry.retrofit.ApiClient
 
-class RepositoriesDeps(val view: RepositoriesView)
+data class RepositoriesDeps(val view: RepositoriesView,
+                            val apiClient: ApiClient)
