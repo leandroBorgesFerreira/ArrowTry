@@ -3,6 +3,7 @@ package br.com.leandro.arrowtry.githubrepos.presentation
 import arrow.data.Reader
 import arrow.data.ReaderApi
 import arrow.data.map
+import arrow.syntax.function.pipe
 import br.com.leandro.arrowtry.githubrepos.data.repositoryUseCase
 import br.com.leandro.arrowtry.githubrepos.di.RepositoriesDeps.RepositoriesContext
 import br.com.leandro.arrowtry.githubrepos.domain.Repository
@@ -20,5 +21,7 @@ fun getSuperHeroes() : Reader<RepositoriesContext, Unit> =
                  })
 
 private fun drawHeroes(repositoryList: List<Repository>, view: RepositoriesView) {
-    view.drawHeroes(repositoryList)
+    repositoryList.sortedByDescending { repository -> repository.stargazersCount } pipe {
+        view.drawHeroes(it)
+    }
 }
