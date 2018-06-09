@@ -1,6 +1,6 @@
-package br.com.leandro.arrowtry.superHeroes.di
+package br.com.leandro.arrowtry.githubrepos.di
 
-import br.com.leandro.arrowtry.superHeroes.view.RepositoriesView
+import br.com.leandro.arrowtry.githubrepos.view.RepositoriesView
 
 sealed class RepositoriesDeps(view: RepositoriesView) {
     data class RepositoriesContext(val view: RepositoriesView) : RepositoriesDeps(view)

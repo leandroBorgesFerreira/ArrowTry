@@ -51,14 +51,11 @@ dependencies {
     kapt "io.arrow-kt:arrow-annotations-processor:$arrow"
 
     implementation "com.squareup.picasso:picasso:2.5.2"
-    implementation 'com.karumi:marvelapiclient:1.0.1'
-
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation "io.reactivex.rxjava2:rxjava:2.1.14"
 
     implementation "org.jetbrains.anko:anko-commons:$ankoVersion"
 
     implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
     implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
 }

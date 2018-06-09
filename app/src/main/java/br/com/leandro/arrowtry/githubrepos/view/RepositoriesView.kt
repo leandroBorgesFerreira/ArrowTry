@@ -1,6 +1,6 @@
-package br.com.leandro.arrowtry.superHeroes.view
+package br.com.leandro.arrowtry.githubrepos.view
 
-import br.com.leandro.arrowtry.superHeroes.domain.Repository
+import br.com.leandro.arrowtry.githubrepos.domain.Repository
 
 interface RepositoriesView {
     fun showNotFoundError()

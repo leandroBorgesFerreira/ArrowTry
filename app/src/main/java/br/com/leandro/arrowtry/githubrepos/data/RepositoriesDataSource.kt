@@ -1,4 +1,4 @@
-package br.com.leandro.arrowtry.superHeroes.data
+package br.com.leandro.arrowtry.githubrepos.data
 
 import arrow.Kind
 import arrow.core.Try
@@ -10,8 +10,8 @@ import arrow.effects.monadDefer
 import arrow.effects.typeclasses.Async
 import arrow.syntax.function.pipe
 import arrow.typeclasses.binding
+import br.com.leandro.arrowtry.githubrepos.domain.Repository
 import br.com.leandro.arrowtry.retrofit.apiClient
-import br.com.leandro.arrowtry.superHeroes.domain.Repository
 import kotlinx.coroutines.experimental.CommonPool
 import kotlinx.coroutines.experimental.async
 

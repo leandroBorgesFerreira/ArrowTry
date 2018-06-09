@@ -1,17 +1,17 @@
-package br.com.leandro.arrowtry.superHeroes.view.adapter
+package br.com.leandro.arrowtry.githubrepos.view.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.leandro.arrowtry.R
-import br.com.leandro.arrowtry.superHeroes.domain.Repository
+import br.com.leandro.arrowtry.githubrepos.domain.Repository
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_list_repository.view.*
 
-class HeroesCardAdapter(
+class RepositoriesAdapter(
         private val characters: List<Repository>,
-        private val itemClick: (Repository) -> Unit) : RecyclerView.Adapter<HeroesCardAdapter.ViewHolder>() {
+        private val itemClick: (Repository) -> Unit) : RecyclerView.Adapter<RepositoriesAdapter.ViewHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, pos: Int): ViewHolder {
       val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_repository, parent, false)

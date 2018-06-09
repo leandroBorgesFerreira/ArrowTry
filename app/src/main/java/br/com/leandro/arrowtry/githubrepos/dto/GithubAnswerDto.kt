@@ -1,6 +1,6 @@
-package br.com.leandro.arrowtry.superHeroes.dto
+package br.com.leandro.arrowtry.githubrepos.dto
 
-import br.com.leandro.arrowtry.superHeroes.domain.Repository
+import br.com.leandro.arrowtry.githubrepos.domain.Repository
 
 class GithubAnswerDto(val total_count: Long,
                       val isIncomplete_results: Boolean,

@@ -1,12 +1,12 @@
-package br.com.leandro.arrowtry.superHeroes.presentation
+package br.com.leandro.arrowtry.githubrepos.presentation
 
 import arrow.data.Reader
 import arrow.data.ReaderApi
 import arrow.data.map
-import br.com.leandro.arrowtry.superHeroes.data.repositoryUseCase
-import br.com.leandro.arrowtry.superHeroes.di.RepositoriesDeps.RepositoriesContext
-import br.com.leandro.arrowtry.superHeroes.domain.Repository
-import br.com.leandro.arrowtry.superHeroes.view.RepositoriesView
+import br.com.leandro.arrowtry.githubrepos.data.repositoryUseCase
+import br.com.leandro.arrowtry.githubrepos.di.RepositoriesDeps.RepositoriesContext
+import br.com.leandro.arrowtry.githubrepos.domain.Repository
+import br.com.leandro.arrowtry.githubrepos.view.RepositoriesView
 
 fun getSuperHeroes() : Reader<RepositoriesContext, Unit> =
         ReaderApi.ask<RepositoriesContext>()

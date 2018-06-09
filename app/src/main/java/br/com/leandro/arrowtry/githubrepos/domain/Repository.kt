@@ -1,4 +1,4 @@
-package br.com.leandro.arrowtry.superHeroes.domain
+package br.com.leandro.arrowtry.githubrepos.domain
 
 import com.google.gson.annotations.SerializedName
 
