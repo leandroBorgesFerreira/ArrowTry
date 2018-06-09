@@ -1,4 +1,4 @@
-package br.com.leandro.arrowtry.superHeroes.dto
+package br.com.leandro.arrowtry.githubrepos.dto
 
 data class DataDto<T>(
         val offset : Int,

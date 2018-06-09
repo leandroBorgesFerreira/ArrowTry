@@ -7,10 +7,9 @@ import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val baseUrl = "https://gateway.marvel.com:443"
+private const val baseUrl = "https://api.github.com/"
 
 private val logInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -32,7 +31,6 @@ private fun getRetrofitBuilderDefaults() =
         Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
 
 private fun provideOkHttpClientOAuth(cache: Cache) : OkHttpClient = httpClientBuilder().cache(cache).build()
 
