@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity(), RepositoriesView {
     }
 
     private fun setupList(listItems : List<Repository>) {
-        heroesListRV.layoutManager = LinearLayoutManager(this)
-        heroesListRV.adapter = RepositoriesAdapter(listItems, { Log.d("Click", "Got a click!") })
+        repositoryListRV.layoutManager = LinearLayoutManager(this)
+        repositoryListRV.adapter = RepositoriesAdapter(listItems, { Log.d("Click", "Got a click!") })
     }
 
     override fun onResume() {
@@ -59,10 +59,10 @@ class MainActivity : AppCompatActivity(), RepositoriesView {
         }
     }
 
-    override fun drawHeroes(heroes: List<Repository>) {
+    override fun drawRepositories(heroes: List<Repository>) {
         runOnUiThread {
             repoList.addAll(heroes)
-            heroesListRV.adapter.notifyDataSetChanged()
+            repositoryListRV.adapter.notifyDataSetChanged()
         }
     }
 }
