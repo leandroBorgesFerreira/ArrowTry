@@ -26,6 +26,6 @@ fun getRepositories(): Reader<RepositoriesDeps, Unit> =
 
 private fun drawRepos(repositoryList: List<Repository>, view: RepositoriesView) {
     repositoryList.sortedByDescending { repository -> repository.stargazersCount } pipe {
-        view.drawHeroes(it)
+        view.drawRepositories(it)
     }
 }

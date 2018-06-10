@@ -6,5 +6,5 @@ interface RepositoriesView {
     fun showNotFoundError()
     fun showGenericError()
     fun showAuthenticationError()
-    fun drawHeroes(heroes: List<Repository>)
+    fun drawRepositories(heroes: List<Repository>)
 }
