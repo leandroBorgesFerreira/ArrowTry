@@ -16,13 +16,13 @@ import org.jetbrains.anko.yesButton
 
 class MainActivity : AppCompatActivity(), RepositoriesView {
 
-    private val heroesList : MutableList<Repository> = mutableListOf()
+    private val repoList : MutableList<Repository> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupList(heroesList)
+        setupList(repoList)
     }
 
     private fun setupList(listItems : List<Repository>) {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), RepositoriesView {
 
     override fun drawHeroes(heroes: List<Repository>) {
         runOnUiThread {
-            heroesList.addAll(heroes)
+            repoList.addAll(heroes)
             heroesListRV.adapter.notifyDataSetChanged()
         }
     }
