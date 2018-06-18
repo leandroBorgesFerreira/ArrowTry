@@ -12,13 +12,13 @@ import kotlinx.coroutines.experimental.async
 
 fun fetchAllRepositories(): Reader<RepositoriesDeps, IO<List<Repository>>> =
         ReaderApi.ask<RepositoriesDeps>()
-                .map({ deps ->
+                .map { deps ->
                          IO.async<List<Repository>> { either ->
                              async {
                                  either(queryForRepositories(deps.apiClient).toEither())
                              }
                          }
-                     })
+                     }
 
 
 private fun queryForRepositories(apiClient: ApiClient): Try<List<Repository>> =

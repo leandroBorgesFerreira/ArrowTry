@@ -12,17 +12,17 @@ import br.com.leandro.arrowtry.githubrepos.view.RepositoriesView
 
 fun getRepositories(): Reader<RepositoriesDeps, Unit> =
         ReaderApi.ask<RepositoriesDeps>()
-            .flatMap({ (view, _) ->
+            .flatMap { (view, _) ->
                  repositoryUseCase()
-                     .map({ io ->
+                     .map { io ->
                               io.unsafeRunAsync { reposEither ->
                                   reposEither.fold(
                                           { view.showGenericError() },
                                           { reposList -> drawRepos(reposList, view) })
                               }
-                          })
+                          }
 
-             })
+             }
 
 private fun drawRepos(repositoryList: List<Repository>, view: RepositoriesView) {
     repositoryList.sortedByDescending { repository -> repository.stargazersCount } pipe {
